@@ -1,0 +1,36 @@
+/* Navigation Bars
+Having easy-to-use navigation is important for any web site.
+With CSS you can transform boring HTML menus into good-looking navigation bars.
+Navigation Bar = List of Links
+A navigation bar needs standard HTML as a base.
+In our examples we will build the navigation bar from a standard HTML list.
+A navigation bar is basically a list of links, so using the <ul> and <li> elements makes perfect sense:
+Example */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Vertical Navigation Bar
+Vertical Navigation Bar
+Home
+News
+Contact
+About
+To build a vertical navigation bar, you can style the <a> elements inside the list, in addition to the code from the previous page:
+Example*/
+li a {
+  display: block;
+  width: 60px;
+}
+
+/* Horizontal Navigation Bar
+HomeNewsContactAbout
+There are two ways to create a horizontal navigation bar. Using inline or floating list items.
+
+Inline List Items
+One way to build a horizontal navigation bar is to specify the <li> elements as inline, in addition to the "standard" code from the previous page: */
+li {
+  display: inline;
+}

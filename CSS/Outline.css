@@ -1,0 +1,124 @@
+/* CSS Outline Style
+The outline-style property specifies the style of the outline, and can have one of the following values:
+
+dotted - Defines a dotted outline
+dashed - Defines a dashed outline
+solid - Defines a solid outline
+double - Defines a double outline
+groove - Defines a 3D grooved outline
+ridge - Defines a 3D ridged outline
+inset - Defines a 3D inset outline
+outset - Defines a 3D outset outline
+none - Defines no outline
+hidden - Defines a hidden outline
+The following example shows the different outline-style values:
+Example
+Demonstration of the different outline styles: */
+p.dotted {outline-style: dotted;}
+p.dashed {outline-style: dashed;}
+p.solid {outline-style: solid;}
+p.double {outline-style: double;}
+p.groove {outline-style: groove;}
+p.ridge {outline-style: ridge;}
+p.inset {outline-style: inset;}
+p.outset {outline-style: outset;}
+
+/* CSS Outline Width
+The outline-width property specifies the width of the outline, and can have one of the following values:
+thin (typically 1px)
+medium (typically 3px)
+thick (typically 5px)
+A specific size (in px, pt, cm, em, etc)
+The following example shows some outlines with different widths:
+A thin outline.
+A medium outline.
+A thick outline.
+A 4px thick outline.
+Example */
+p.ex1 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: thin;
+}
+
+p.ex2 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: medium;
+}
+
+p.ex3 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: thick;
+}
+
+p.ex4 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: 4px;
+}
+
+/* CSS Outline Color
+The outline-color property is used to set the color of the outline.
+The color can be set by:
+name - specify a color name, like "red"
+HEX - specify a hex value, like "#ff0000"
+RGB - specify a RGB value, like "rgb(255,0,0)"
+HSL - specify a HSL value, like "hsl(0, 100%, 50%)"
+invert - performs a color inversion (which ensures that the outline is visible, regardless of color background)
+The following example shows some different outlines with different colors. Also notice that these elements also have a thin black border inside the outline:
+A solid red outline.
+A dotted blue outline.
+An outset grey outline.
+Example */
+p.ex1 {
+  border: 2px solid black;
+  outline-style: solid;
+  outline-color: red;
+}
+
+p.ex2 {
+  border: 2px solid black;
+  outline-style: dotted;
+  outline-color: blue;
+}
+
+p.ex3 {
+  border: 2px solid black;
+  outline-style: outset;
+  outline-color: grey;
+}
+
+/* CSS Outline - Shorthand property
+The outline property is a shorthand property for setting the following individual outline properties:
+outline-width
+outline-style (required)
+outline-color
+The outline property is specified as one, two, or three values from the list above. The order of the values does not matter.
+The following example shows some outlines specified with the shorthand outline property:
+A dashed outline.
+A dotted red outline.
+A 5px solid yellow outline.
+A thick ridge pink outline.
+Example */
+p.ex1 {outline: dashed;}
+p.ex2 {outline: dotted red;}
+p.ex3 {outline: 5px solid yellow;}
+p.ex4 {outline: thick ridge pink;}
+
+/* CSS Outline Offset
+The outline-offset property adds space between an outline and the edge/border of an element. The space between an element and its outline is transparent.
+The following example specifies an outline 15px outside the border edge:
+This paragraph has an outline 15px outside the border edge.
+Example */
+p {
+  margin: 30px;
+  border: 1px solid black;
+  outline: 1px solid red;
+  outline-offset: 15px;
+}

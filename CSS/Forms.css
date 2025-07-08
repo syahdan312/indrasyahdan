@@ -1,0 +1,14 @@
+/* The look of an HTML form can be greatly improved with CSS:
+First Name 
+Your name..
+Last Name 
+Your last name..
+Country 
+Australia
+Styling Input Fields
+Use the width property to determine the width of the input field:
+First Name 
+Example */
+input {
+  width: 100%;
+}

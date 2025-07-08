@@ -1,0 +1,20 @@
+/* CSS 2D Transforms Functions
+With the CSS transform property you can use the following 2D transformation functions:
+translate()
+rotate()
+scaleX()
+scaleY()
+scale()
+skewX()
+skewY()
+skew()
+matrix()
+Tip: You will learn about 3D transformations in the next chapter.
+The translate() Function
+Translate
+The translate() function moves an element from its current position (according to the parameters given for the X-axis and the Y-axis).
+The following example moves the <div> element 50 pixels to the right, and 100 pixels down from its current position:
+Example */
+div {
+  transform: translate(50px, 100px);
+}

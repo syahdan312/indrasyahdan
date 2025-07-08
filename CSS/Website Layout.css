@@ -1,0 +1,14 @@
+/* Website Layout
+A website is often divided into headers, menus, content and a footer:
+HeaderNavigation Menu
+Main Content
+Footer
+There are tons of different layout designs to choose from. However, the structure above, is one of the most common, and we will take a closer look at it in this tutorial.
+Header
+A header is usually located at the top of the website (or right below a top navigation menu). It often contains a logo or the website name:
+Example */
+.header {
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 20px;
+}

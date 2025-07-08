@@ -1,0 +1,14 @@
+Test Web Storage API Support
+Before using web storage, we can quickly check browser support for localStorage and sessionStorage:
+
+Example
+Test browser support:
+
+<script>
+const x = document.getElementById("result");
+if (typeof(Storage) !== "undefined") {
+  x.innerHTML = "Your browser supports Web storage!";
+} else {
+  x.innerHTML = "Sorry, no Web storage support!";
+}
+</script>

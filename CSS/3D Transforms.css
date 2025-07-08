@@ -1,0 +1,12 @@
+/* CSS 3D Transforms Functions
+With the CSS transform property you can use the following 3D transformation functions:
+rotateX()
+rotateY()
+rotateZ()
+The rotateX() Function
+Rotate X
+The rotateX() function rotates an element around its X-axis at a given degree:
+Example */
+#myDiv {
+  transform: rotateX(150deg);
+}

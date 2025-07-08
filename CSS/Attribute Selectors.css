@@ -1,0 +1,12 @@
+/* Style HTML Elements With Specific Attributes
+It is possible to style HTML elements that have specific attributes or attribute values.
+CSS [attribute] Selector
+The [attribute] selector is used to select elements with a specified attribute.
+The following example selects all <a> elements with a target attribute:
+Example */
+a[target] {
+  background-color: yellow;
+}
+a[target="_blank"] {
+  background-color: yellow;
+}

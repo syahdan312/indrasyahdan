@@ -1,0 +1,14 @@
+/* The opacity property specifies the opacity/transparency of an element.
+Transparent Image
+The opacity property can take a value from 0.0 - 1.0. The lower the value, the more transparent:
+Forest
+opacity 0.2
+Forest
+opacity 0.5
+Forest
+opacity 1
+(default)
+Example */
+img {
+  opacity: 0.5;
+}

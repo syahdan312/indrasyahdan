@@ -1,0 +1,9 @@
+/* Rounded Images
+You can use the border-radius property to create rounded images:
+
+
+Paris
+Example */
+img {
+  border-radius: 8px;
+}

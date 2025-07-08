@@ -1,0 +1,6 @@
+/* Styling Links
+Links can be styled with any CSS property (e.g. color, font-family, background, etc.).
+Example */
+a {
+  color: hotpink;
+}

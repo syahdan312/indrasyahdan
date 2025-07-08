@@ -1,0 +1,24 @@
+/* CSS Shadow Effects
+With CSS you can add shadow to text and to elements.
+In these chapters you will learn about the following properties:
+text-shadow
+box-shadow
+CSS Text Shadow
+The CSS text-shadow property applies shadow to text.
+In its simplest use, you only specify the horizontal shadow (2px) and the vertical shadow (2px):
+Text shadow effect!
+Example */
+h1 {
+  text-shadow: 2px 2px;
+}
+
+/* CSS box-shadow Property
+The CSS box-shadow property is used to apply one or more shadows to an element.
+Specify a Horizontal and a Vertical Shadow
+In its simplest use, you only specify a horizontal and a vertical shadow. The default color of the shadow is the current text-color.
+A <div> element with a box-shadow
+Example
+Specify a horizontal and a vertical shadow: */
+div {
+  box-shadow: 10px 10px;
+}

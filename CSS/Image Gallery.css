@@ -1,0 +1,32 @@
+/* CSS can be used to create an image gallery.
+Cinque Terre
+Add a description of the image here
+Forest
+Add a description of the image here
+Northern Lights
+Add a description of the image here
+Mountains
+Add a description of the image here
+Image Gallery
+The following image gallery is created with CSS:
+Example */
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}

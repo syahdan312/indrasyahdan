@@ -1,0 +1,13 @@
+/* Using The Font You Want
+In the @font-face rule; first define a name for the font (e.g. myFirstFont) and then point to the font file.
+Tip: Always use lowercase letters for the font URL. Uppercase letters can give unexpected results in IE.
+To use the font for an HTML element, refer to the name of the font (myFirstFont) through the font-family property:
+Example */
+@font-face {
+  font-family: myFirstFont;
+  src: url(sansation_light.woff);
+}
+
+div {
+  font-family: myFirstFont;
+}

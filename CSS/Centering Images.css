@@ -1,0 +1,17 @@
+/* Center an Image Horizontally in Two Ways
+1. Using margin: auto
+One way to center an image horizontally on a page is to use margin: auto.
+
+Since the <img> element is an inline element (and margin: auto does not have any effect on inline elements) we also must convert the image to a block element, with display: block.
+
+In addition, we have to define a width. The width of the image must be smaller than the width of the page.
+
+Here is a horizontally centered image using margin: auto:
+
+Paris
+Example */
+img {
+  display: block;
+  margin: auto;
+  width: 50%;
+}

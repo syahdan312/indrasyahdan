@@ -1,0 +1,21 @@
+/* CSS Border Images
+With the CSS border-image property, you can set an image to be used as the border around an element.
+CSS border-image Property
+The CSS border-image property allows you to specify an image to be used instead of the normal border around an element.
+The property has three parts:
+The image to use as the border
+Where to slice the image
+Define whether the middle sections should be repeated or stretched
+We will use the following image (called "border.png"):
+Border
+The border-image property takes the image and slices it into nine sections, like a tic-tac-toe board. It then places the corners at the corners, and the middle sections are repeated or stretched as you specify.
+Note: For border-image to work, the element also needs the border property set!
+Here, the middle sections of the image are repeated to create the border:
+An image as a border!
+Here is the code:
+Example */
+#borderimg {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 30 round;
+}

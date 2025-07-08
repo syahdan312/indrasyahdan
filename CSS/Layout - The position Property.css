@@ -1,0 +1,19 @@
+/* The position Property
+The position property specifies the type of positioning method used for an element.
+There are five different position values:
+static
+relative
+fixed
+absolute
+sticky
+Elements are then positioned using the top, bottom, left, and right properties. However, these properties will not work unless the position property is set first. They also work differently depending on the position value.
+position: static;
+HTML elements are positioned static by default.
+Static positioned elements are not affected by the top, bottom, left, and right properties.
+An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page:
+This <div> element has position: static;
+Here is the CSS that is used: */
+div.static {
+  position: static;
+  border: 3px solid #73AD21;
+}

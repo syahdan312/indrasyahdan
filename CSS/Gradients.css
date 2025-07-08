@@ -1,0 +1,39 @@
+/* CSS Linear Gradients
+To create a linear gradient you must define at least two color stops. Color stops are the colors you want to render smooth transitions among. You can also set a starting point and a direction (or an angle) along with the gradient effect.
+Syntax
+background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
+Direction - Top to Bottom (this is default)
+The following example shows a linear gradient that starts at the top. It starts red, transitioning to yellow:
+top to bottom (default)
+Example */
+#grad {
+  background-image: linear-gradient(red, yellow);
+}
+
+/* CSS Radial Gradients
+A radial gradient is defined by its center.
+To create a radial gradient you must also define at least two color stops.
+Syntax
+background-image: radial-gradient(shape size at position, start-color, ..., last-color);
+By default, shape is ellipse, size is farthest-corner, and position is center.
+Radial Gradient - Evenly Spaced Color Stops (this is default)
+The following example shows a radial gradient with evenly spaced color stops:
+Example */
+#grad {
+  background-image: radial-gradient(red, yellow, green);
+}
+
+/* CSS Conic Gradients
+A conic gradient is a gradient with color transitions rotated around a center point.
+To create a conic gradient you must define at least two colors.
+Syntax
+background-image: conic-gradient([from angle] [at position,] color [degree], color [degree], ...);
+By default, angle is 0deg and position is center.
+If no degree is specified, the colors will be spread equally around the center point.
+Conic Gradient: Three Colors
+The following example shows a conic gradient with three colors:
+Example
+A conic gradient with three colors: */
+#grad {
+  background-image: conic-gradient(red, yellow, green);
+}

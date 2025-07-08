@@ -1,0 +1,12 @@
+/* The transparent Keyword
+The transparent keyword is used to make a color transparent. This is often used to make a transparent background color for an element.
+
+Example
+Here, the background color of the <div> element will be fully transparent, and the background image will show through: */
+body {
+  background-image: url("paper.gif");
+}
+
+div {
+  background-color: transparent;
+}

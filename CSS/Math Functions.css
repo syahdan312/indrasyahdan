@@ -1,0 +1,22 @@
+/* The CSS math functions allow mathematical expressions to be used as property values. Here, we will explain the calc(), max() and min() functions.
+
+The calc() Function
+The calc() function performs a calculation to be used as the property value.
+
+CSS Syntax
+calc(expression)
+Value	Description
+expression	Required. A mathematical expression. The result will be used as the value.
+The following operators can be used: + - * /
+Let us look at an example:
+
+Example
+Use calc() to calculate the width of a <div> element: */
+#div1 {
+  position: absolute;
+  left: 50px;
+  width: calc(100% - 100px);
+  border: 1px solid black;
+  background-color: yellow;
+  padding: 5px;
+}

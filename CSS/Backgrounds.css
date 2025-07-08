@@ -1,0 +1,21 @@
+/* CSS background-color
+The background-color property specifies the background color of an element.
+
+Example
+The background color of a page is set like this: */
+
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  background-color: green;
+}
+
+div {
+  background-color: lightblue;
+}
+
+p {
+  background-color: yellow;
+}

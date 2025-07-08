@@ -1,0 +1,30 @@
+/* The CSS filter property is used to add visual effects to elements.
+
+
+CSS Filters
+The CSS filter property is used to add visual effects (like blur and saturation) to elements.
+
+Within the filter property, you can use the following CSS functions:
+
+blur()
+brightness()
+contrast()
+drop-shadow()
+grayscale()
+hue-rotate()
+invert()
+opacity()
+saturate()
+sepia()
+The CSS blur() Function
+The blur() filter function applies a blur effect to an element. A larger value will create more blur.
+
+Example
+Apply different blur effects to <img> elements: */
+#img1 {
+  filter: blur(2px);
+}
+
+#img2 {
+  filter: blur(6px);
+}

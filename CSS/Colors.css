@@ -1,0 +1,45 @@
+/* CSS Background Color
+You can set the background color for HTML elements:
+
+Hello World
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+ */
+/* <h1 style="background-color:DodgerBlue;">Hello World</h1>
+<p style="background-color:Tomato;">Lorem ipsum...</p>
+ 
+<h1 style="color:Tomato;">Hello World</h1>
+<p style="color:DodgerBlue;">Lorem ipsum...</p>
+<p style="color:MediumSeaGreen;">Ut wisi enim...</p>
+ */
+
+ /* HEX Colors
+ #ff0000
+#0000ff
+#3cb371
+#ee82ee
+#ffa500
+#6a5acd */
+
+/* HSL Colors */
+/* hsl(0, 100%, 50%)
+hsl(240, 100%, 50%)
+hsl(147, 50%, 47%)
+hsl(300, 76%, 72%)
+hsl(39, 100%, 50%)
+hsl(248, 53%, 58%) */
+
+/* Colors
+CSS supports 140+ color names, HEX values, RGB values, RGBA values, HSL values, HSLA values, and opacity.
+RGBA Colors
+RGBA color values are an extension of RGB color values with an alpha channel - which specifies the opacity for a color.
+An RGBA color value is specified with: rgba(red, green, blue, alpha). The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).
+rgba(255, 0, 0, 0.2);
+rgba(255, 0, 0, 0.4);
+rgba(255, 0, 0, 0.6);
+rgba(255, 0, 0, 0.8);
+The following example defines different RGBA colors:
+Example */
+#p1 {background-color: rgba(255, 0, 0, 0.3);}  /* red with opacity */
+#p2 {background-color: rgba(0, 255, 0, 0.3);}  /* green with opacity */
+#p3 {background-color: rgba(0, 0, 255, 0.3);}  /* blue with opacity */
