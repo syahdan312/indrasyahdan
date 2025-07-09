@@ -1,0 +1,19 @@
+/* CSS User Interface
+In this chapter you will learn about the following CSS user interface properties:
+
+resize
+outline-offset
+CSS Resizing
+The resize property specifies if (and how) an element should be resizable by the user.
+
+This div element is resizable by the user!
+
+To resize: Click and drag the bottom right corner of this div element.
+
+The following example lets the user resize only the width of a <div> element:
+
+Example */
+div {
+  resize: horizontal;
+  overflow: auto;
+}

@@ -1,0 +1,13 @@
+/* The Image
+Look at the following image from Paris, which is 400x300 pixels:
+
+Paris
+Next, we use object-fit: cover; to keep the aspect ratio and to fill the given dimension. However, the image will be clipped to fit, like this:
+
+Paris
+Example */
+img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}

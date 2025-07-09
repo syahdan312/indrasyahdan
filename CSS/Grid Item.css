@@ -1,0 +1,16 @@
+/* Grid Items
+A grid container contains one or more grid items.
+
+By default, a container has one grid item for each column, in each row, but you can style the grid items so that they will span multiple columns and/or rows.
+
+The grid-column-start and grid-column-end Properties
+The grid-column-start property specifies where to start a grid item.
+
+The grid-column-end property specifies where to end a grid item.
+
+Example
+Place the first grid item at column-line 1, and let it end on column-line 3: */
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}

@@ -1,0 +1,7 @@
+JavaScript ISO Dates
+ISO 8601 is the international standard for the representation of dates and times.
+
+The ISO 8601 syntax (YYYY-MM-DD) is also the preferred JavaScript date format:
+
+Example (Complete date)
+const d = new Date("2015-03-25");

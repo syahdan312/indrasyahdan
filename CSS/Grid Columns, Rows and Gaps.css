@@ -1,0 +1,9 @@
+/* The column-gap Property
+The column-gap property specifies the gap between the columns in a grid.
+
+Example
+Specify a 50 pixels gap between the columns in the grid: */
+.container {
+  display: grid;
+  column-gap: 50px;
+}

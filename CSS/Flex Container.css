@@ -1,0 +1,10 @@
+/* The CSS Flex Container
+Like we specified in the previous chapter, this is a flex container (the blue area) with three flex items:
+
+1
+2
+3
+The flex container becomes flexible by setting the display property to flex: */
+.flex-container {
+  display: flex;
+}

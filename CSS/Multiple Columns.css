@@ -1,0 +1,9 @@
+/* CSS Create Multiple Columns
+The column-count property specifies the number of columns an element should be divided into.
+
+The following example will divide the text in the <div> element into 3 columns:
+
+Example */
+div {
+  column-count: 3;
+}

@@ -1,0 +1,16 @@
+/* The CSS Flex Items
+The direct child elements of a flex container automatically becomes flex items.
+
+1
+2
+3
+4
+The element above represents four blue flex items inside a grey flex container.
+
+Example */
+/* <div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+</div> */

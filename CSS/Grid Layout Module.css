@@ -1,0 +1,35 @@
+/* CSS Grid Layout
+The Grid Layout Module offers a grid-based layout system, with rows and columns.
+
+The Grid Layout Module allows developers to easily create complex web layouts.
+
+The Grid Layout Module makes it easier to design a responsive layout structure, without using float or positioning.
+
+The CSS grid properties are supported in all modern browsers.
+
+Grid vs. Flexbox
+The CSS Grid Layout should be used for two-dimensional layout, with rows AND columns.
+
+The CSS Flexbox Layout should be used for one-dimensional layout, with rows OR columns.
+
+CSS Grid Components
+A grid always consists of:
+
+a Grid Container - the parent (container) <div> element
+Grid Items - the items inside the container <div>
+Grid Container and Grid Items
+A grid layout consists of a parent element (the grid container), with one or more grid items.
+
+All direct children of the grid container automatically become grid items.
+
+Example */
+/* <div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+</div> */

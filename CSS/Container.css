@@ -1,0 +1,25 @@
+/* Grid Container
+A grid container contains one or more grid items arranged in columns and rows.
+
+Direct child elements(s) of the grid container automatically becomes grid items.
+
+An element becomes a grid container when its display property is set to grid or inline-grid.
+
+Grid Tracks
+The rows and columns of a grid is defined with the grid-template-rows and the grid-template-columns properties (or the shorthand grid or grid-template properties).
+
+These define the grid tracks. A grid track is the space between two adjacent grid lines.
+
+The grid-template-columns Property
+The grid-template-columns property defines the number of columns in your grid layout, and it can define the width of each column.
+
+The value is a space-separated-list, where each value defines the width of the respective column.
+
+If you want your grid layout to contain 4 columns, specify the width of the 4 columns, or "auto" if all columns should have the same width.
+
+Example
+Make a grid with 4 columns of equal width: */
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
