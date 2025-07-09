@@ -1,69 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title> Belajar git untuk web </title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Halo, Git!</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Learning Hub - Panduan Lengkap</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        <a href="HTML/Audio.html">Audio</a>
-        <a href="HTML/Background Images.html">Background</a>
-        <a href="HTML/Block and Inline Elements.html">Block and inline Elements</a>
-        <a href="HTML/Canvas Graphics.html">Canvas</a>
-        <a href="HTML/class Attribute.html">class Attribute</a>
-        <a href="HTML/Computer Code Elements.html">Computer Code Elements</a>
-        <a href="HTML/Div Element.html">Div Elements</a>
-        <a href="HTML/Drag and Drop API.html">Drag and Drop</a>
-        <a href="HTML/Emojis in HTML.html">Emojis</a>
-        <a href="HTML/Encoding (Character Sets).html">Encoding</a>
-        <a href="HTML/Entities.html">Entities</a>
-        <a href="HTML/Favicon.html">Favicon</a>
-        <a href="HTML/Form Attributes.html">form Attribute</a>
-        <a href="HTML/Form Elements.html">From Elements</a>
-        <a href="HTML/Forms.html">Forms</a>
-        <a href="HTML/Geolocation API.html">Geolocation</a>
-        <a href="HTML/Input Attributes.html">id Attribute</a>
-        <a href="HTML/Iframes.html">Iframes</Iframe></a>
-        <a href="HTML/Image Maps.html">Image maps</a>
-        <a href="HTML/Images.html">Images</a>
-        <a href="HTML/Input Attributes.html">Input Attribute</a>
-        <a href="HTML/Input form Attributes.html">Input form Attribute</a>
-        <a href="HTML/Input Types.html">Input Types</Input></a>
-        <a href="HTML/JavaScript.html">JavaScript</a>
-        <a href="HTML/Layout Elements and Techniques.html">layout Element</a>
-        <a href="HTML/Links - Create Bookmarks.html">links - Create</a>
-        <a href="HTML/Links - Different Colors.html">link - Different</a>
-        <a href="HTML/links.html">links</a>
-        <a href="HTML/Lists.html">Lists</a>
-        <a href="HTML/Other Lists.html">other Lists</a>
-        <a href="HTML/Page Title.html">page title</title></a>
-        <a href="HTML/picture Element.html">Background</a>
-        <a href="HTML/Plug-ins.html">Plug-ins</a>
-        <a href="HTML/Responsive Web Design.html">Responsive</a>
-        <a href="HTML/Semantic Elements.html">Semantic Element</a>
-        <a href="HTML/Server-Sent Events API.html">SSE</a>
-        <a href="HTML/Style Guide.html">Style Guide</style></a>
-        <a href="HTML/Styles - CSS.html">Style - CSS</a>
-        <a href="HTML/SVG Graphics.html">SVG</a>
-        <a href="HTML/Symbols.html">Symbols</a>
-        <a href="HTML/Table Borders.html">Table Borders</a>
-        <a href="HTML/Table Colgroup.html">Table Colgroup</a>
-        <a href="HTML/Table Colspan & Rowspan.html">Table Colspan</a>
-        <a href="HTML/Table Headers.html">Table Headers</a>
-        <a href="HTML/Table Padding & Spacing.html">Table Padding</a>
-        <a href="HTML/Table Sizes.html">Table Sizes</a>
-        <a href="HTML/Table Styling.html">Table Styling</a>
-        <a href="HTML/Tables.html">Tables</a>
-        <a href="HTML/The Head Element.html">The Head Element</a>
-        <a href="HTML/Uniform Resource Locators.html">Uniform</a>
-        <a href="HTML/Unordered Lists.html">Unordered</a>
-        <a href="HTMLM/Versus">Versus XHTML</a>
-        <a href="HTML/Video.html">Video</a>
-        <a href="HTML/Web Storage API.html">Web Storage</a>
-        <a href="HTML/Web Workers API.html">Web Workers</a>
-        <a href="HTML/YouTube Videos.html">YouTube Videos</a>
-        <script src="script.js"></script>
-    </body>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header .subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .search-box {
+            position: relative;
+            max-width: 400px;
+            margin: 0 auto 2rem;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            outline: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .search-box input::placeholder {
+            color: #999;
+        }
+
+        .category-section {
+            margin-bottom: 3rem;
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        .category-title {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 2px;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 2rem;
+        }
+
+        .link-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 20px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s;
+        }
+
+        .link-card:hover::before {
+            left: 100%;
+        }
+
+        .link-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            background: rgba(255, 255, 255, 1);
+        }
+
+        .link-card .icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .link-card .title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .link-card .description {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        /* Color themes for different categories */
+        .basics .link-card { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); color: white; }
+        .forms .link-card { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #333; }
+        .media .link-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+        .advanced .link-card { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); color: #333; }
+        .tables .link-card { background: linear-gradient(135deg, #ff8a80 0%, #ea4c89 100%); color: white; }
+        .apis .link-card { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); color: #333; }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Stagger animations */
+        .category-section:nth-child(1) { animation-delay: 0.2s; }
+        .category-section:nth-child(2) { animation-delay: 0.4s; }
+        .category-section:nth-child(3) { animation-delay: 0.6s; }
+        .category-section:nth-child(4) { animation-delay: 0.8s; }
+        .category-section:nth-child(5) { animation-delay: 1.0s; }
+        .category-section:nth-child(6) { animation-delay: 1.2s; }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .links-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 15px;
+            }
+            
+            .stats {
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 HTML Learning Hub</h1>
+            <p class="subtitle">Panduan Lengkap Belajar HTML untuk Pengembangan Web</p>
+            <div class="search-box">
+                <input type="text" placeholder="Cari topik HTML..." id="searchInput">
+            </div>
+        </div>
+
+        <div class="category-section basics">
+            <h2 class="category-title">📚 Dasar-dasar HTML</h2>
+            <div class="links-grid">
+                <a href="HTML/Block and Inline Elements.html" class="link-card">
+                    <span class="icon">🧱</span>
+                    <div class="title">Block & Inline Elements</div>
+                    <div class="description">Pelajari perbedaan elemen block dan inline dalam HTML</div>
+                </a>
+                <a href="HTML/Entities.html" class="link-card">
+                    <span class="icon">🔤</span>
+                    <div class="title">HTML Entities</div>
+                    <div class="description">Karakter khusus dan simbol dalam HTML</div>
+                </a>
+                <a href="HTML/Encoding (Character Sets).html" class="link-card">
+                    <span class="icon">🌐</span>
+                    <div class="title">Character Encoding</div>
+                    <div class="description">Pengaturan karakter dan encoding UTF-8</div>
+                </a>
+                <a href="HTML/Semantic Elements.html" class="link-card">
+                    <span class="icon">📝</span>
+                    <div class="title">Semantic Elements</div>
+                    <div class="description">Elemen semantik HTML5 untuk struktur yang lebih baik</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="category-section forms">
+            <h2 class="category-title">📋 Forms & Input</h2>
+            <div class="links-grid">
+                <a href="HTML/Forms.html" class="link-card">
+                    <span class="icon">📄</span>
+                    <div class="title">HTML Forms</div>
+                    <div class="description">Membuat formulir interaktif dengan HTML</div>
+                </a>
+                <a href="HTML/Form Elements.html" class="link-card">
+                    <span class="icon">🎛️</span>
+                    <div class="title">Form Elements</div>
+                    <div class="description">Berbagai elemen form seperti input, select, textarea</div>
+                </a>
+                <a href="HTML/Input Types.html" class="link-card">
+                    <span class="icon">⌨️</span>
+                    <div class="title">Input Types</div>
+                    <div class="description">Jenis-jenis input: text, email, password, dll</div>
+                </a>
+                <a href="HTML/Input Attributes.html" class="link-card">
+                    <span class="icon">⚙️</span>
+                    <div class="title">Input Attributes</div>
+                    <div class="description">Atribut untuk mengontrol perilaku input</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="category-section media">
+            <h2 class="category-title">🎬 Media & Graphics</h2>
+            <div class="links-grid">
+                <a href="HTML/Images.html" class="link-card">
+                    <span class="icon">🖼️</span>
+                    <div class="title">Images</div>
+                    <div class="description">Menampilkan dan mengoptimalkan gambar di web</div>
+                </a>
+                <a href="HTML/Video.html" class="link-card">
+                    <span class="icon">🎥</span>
+                    <div class="title">Video</div>
+                    <div class="description">Embed video HTML5 dengan kontrol player</div>
+                </a>
+                <a href="HTML/Audio.html" class="link-card">
+                    <span class="icon">🎵</span>
+                    <div class="title">Audio</div>
+                    <div class="description">Menambahkan file audio ke halaman web</div>
+                </a>
+                <a href="HTML/Canvas Graphics.html" class="link-card">
+                    <span class="icon">🎨</span>
+                    <div class="title">Canvas Graphics</div>
+                    <div class="description">Membuat grafik dan animasi dengan Canvas</div>
+                </a>
+                <a href="HTML/SVG Graphics.html" class="link-card">
+                    <span class="icon">📐</span>
+                    <div class="title">SVG Graphics</div>
+                    <div class="description">Grafik vektor scalable dengan SVG</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="category-section advanced">
+            <h2 class="category-title">⚡ Advanced Features</h2>
+            <div class="links-grid">
+                <a href="HTML/Drag and Drop API.html" class="link-card">
+                    <span class="icon">🤏</span>
+                    <div class="title">Drag & Drop API</div>
+                    <div class="description">Implementasi drag and drop interaktif</div>
+                </a>
+                <a href="HTML/Geolocation API.html" class="link-card">
+                    <span class="icon">📍</span>
+                    <div class="title">Geolocation API</div>
+                    <div class="description">Mendapatkan lokasi pengguna dengan JavaScript</div>
+                </a>
+                <a href="HTML/Web Storage API.html" class="link-card">
+                    <span class="icon">💾</span>
+                    <div class="title">Web Storage</div>
+                    <div class="description">LocalStorage dan SessionStorage</div>
+                </a>
+                <a href="HTML/Web Workers API.html" class="link-card">
+                    <span class="icon">⚙️</span>
+                    <div class="title">Web Workers</div>
+                    <div class="description">Background processing dengan Web Workers</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="category-section tables">
+            <h2 class="category-title">📊 Tables & Data</h2>
+            <div class="links-grid">
+                <a href="HTML/Tables.html" class="link-card">
+                    <span class="icon">📋</span>
+                    <div class="title">HTML Tables</div>
+                    <div class="description">Membuat tabel untuk menampilkan data</div>
+                </a>
+                <a href="HTML/Table Styling.html" class="link-card">
+                    <span class="icon">🎨</span>
+                    <div class="title">Table Styling</div>
+                    <div class="description">Styling tabel dengan CSS</div>
+                </a>
+                <a href="HTML/Table Colspan & Rowspan.html" class="link-card">
+                    <span class="icon">🔗</span>
+                    <div class="title">Colspan & Rowspan</div>
+                    <div class="description">Menggabungkan sel tabel</div>
+                </a>
+                <a href="HTML/Lists.html" class="link-card">
+                    <span class="icon">📝</span>
+                    <div class="title">Lists</div>
+                    <div class="description">Ordered dan unordered lists</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="category-section apis">
+            <h2 class="category-title">🔧 Tools & Integration</h2>
+            <div class="links-grid">
+                <a href="HTML/JavaScript.html" class="link-card">
+                    <span class="icon">⚡</span>
+                    <div class="title">JavaScript Integration</div>
+                    <div class="description">Menghubungkan HTML dengan JavaScript</div>
+                </a>
+                <a href="HTML/Styles - CSS.html" class="link-card">
+                    <span class="icon">🎨</span>
+                    <div class="title">CSS Styling</div>
+                    <div class="description">Styling HTML dengan CSS</div>
+                </a>
+                <a href="HTML/Responsive Web Design.html" class="link-card">
+                    <span class="icon">📱</span>
+                    <div class="title">Responsive Design</div>
+                    <div class="description">Membuat website yang responsif</div>
+                </a>
+                <a href="HTML/Iframes.html" class="link-card">
+                    <span class="icon">🖼️</span>
+                    <div class="title">Iframes</div>
+                    <div class="description">Embed konten dari sumber eksternal</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Topik HTML</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">6</span>
+                <span class="stat-label">Kategori</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Gratis</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const linkCards = document.querySelectorAll('.link-card');
+            
+            linkCards.forEach(card => {
+                const title = card.querySelector('.title').textContent.toLowerCase();
+                const description = card.querySelector('.description').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Add hover sound effect (optional)
+        document.querySelectorAll('.link-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
 </html>
