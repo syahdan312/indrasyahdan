@@ -1,0 +1,88 @@
+The JavaScript apply() Method
+The apply() method is similar to the call() method (previous chapter).
+
+In this example the fullName method of person is applied on person1:
+
+Example
+const person = {
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+const person1 = {
+  firstName: "Mary",
+  lastName: "Doe"
+}
+
+// This will return "Mary Doe":
+person.fullName.apply(person1);
+Function Borrowing
+With the bind() method, an object can borrow a method from another object.
+
+The example below creates 2 objects (person and member).
+
+The member object borrows the fullname method from the person object:
+
+Example
+const person = {
+  firstName:"John",
+  lastName: "Doe",
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+const member = {
+  firstName:"Hege",
+  lastName: "Nilsen",
+}
+
+let fullName = person.fullName.bind(member);
+All Functions are Methods
+In JavaScript all functions are object methods.
+
+If a function is not a method of a JavaScript object, it is a function of the global object (see previous chapter).
+
+The example below creates an object with 3 properties, firstName, lastName, fullName.
+
+Example
+const person = {
+  firstName:"John",
+  lastName: "Doe",
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+// This will return "John Doe":
+person.fullName();  
+Function Declarations
+Earlier in this tutorial, you learned that functions are declared with the following syntax:
+
+function functionName(parameters) {
+  // code to be executed
+}
+Declared functions are not executed immediately. They are "saved for later use", and will be executed later, when they are invoked (called upon).
+
+Example
+function myFunction(a, b) {
+  return a * b;
+}
+Invoking a Function as a Function
+Example
+function myFunction(a, b) {
+  return a * b;
+}
+myFunction(10, 2);           // Will return 20
+
+Function Parameters and Arguments
+Earlier in this tutorial, you learned that functions can have parameters:
+
+function functionName(parameter1, parameter2, parameter3) {
+  // code to be executed
+}
+// Function to compute the product of p1 and p2
+function myFunction(p1, p2) {
+  return p1 * p2;
+}

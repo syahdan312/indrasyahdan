@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Belajar git untuk web </title>
+        
+        <link rel="stylesheet" href="style.css">
+    </head>
+        <div class="nav-container">
+      <a href="#" class="nav-logo">Belajar git/github</a>
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link active" onclick="showSection('html')">Html</a>
+        </li>
+        <li class="nav-item">
+          <a href="css.html" class="nav-link" onclick="showSection('tutorials')">css</a>
+        </li>
+        <li class="nav-item">
+          <a href="indexjs.html" class="nav-link" onclick="showSection('js')">JavaScript</a>
+        </li>
+      </ul>
+
+    <style>
+        /* Modern CSS for HTML Learning Hub */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    animation: fadeInDown 1s ease-out;
+}
+
+/* Container for all links */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Grid layout for links */
+body > a {
+    display: inline-block;
+    margin: 8px;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-width: 7000px;
+    text-align: center;
+}
+
+/* Create a grid container */
+.links-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Since we can't modify HTML, we'll style the links directly */
+body > a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    background: rgba(255, 255, 255, 1);
+    color: #667eea;
+}
+
+/* Add some variety with nth-child selectors */
+body > a:nth-child(even) {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    color: white;
+}
+
+body > a:nth-child(3n) {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    color: #333;
+}
+
+body > a:nth-child(4n) {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    color: white;
+}
+
+body > a:nth-child(5n) {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+/* Hover effects for different types */
+body > a:nth-child(even):hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(255, 154, 158, 0.4);
+}
+
+body > a:nth-child(3n):hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(168, 237, 234, 0.4);
+}
+
+body > a:nth-child(4n):hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(255, 154, 158, 0.4);
+}
+
+body > a:nth-child(5n):hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+/* Active state */
+body > a:active {
+    transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body > a {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stagger animation for links */
+body > a:nth-child(1) { animation-delay: 0.1s; }
+body > a:nth-child(2) { animation-delay: 0.2s; }
+body > a:nth-child(3) { animation-delay: 0.3s; }
+body > a:nth-child(4) { animation-delay: 0.4s; }
+body > a:nth-child(5) { animation-delay: 0.5s; }
+body > a:nth-child(6) { animation-delay: 0.6s; }
+body > a:nth-child(7) { animation-delay: 0.7s; }
+body > a:nth-child(8) { animation-delay: 0.8s; }
+body > a:nth-child(9) { animation-delay: 0.9s; }
+body > a:nth-child(10) { animation-delay: 1.0s; }
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    body > a {
+        min-width: 180px;
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    body {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    body > a {
+        min-width: 160px;
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        margin: 6px;
+    }
+}
+
+/* Add some special effects */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+    </style>
+    <body>
+        <h1>Halo, Git!</h1>
+
+        <a href="JAVASCRIPT/2009 (ES5).html">Audio</a>
+        <a href="JAVASCRIPT/2015 (ES6).html">Background</a>
+        <a href="JAVASCRIPT/Applications.html">Block and inline Elements</a>
+        <a href="JAVASCRIPT/Arithmetic.html">Canvas</a>
+        <a href="JAVASCRIPT/Array Const.html">class Attribute</a>
+        <a href="JAVASCRIPT/Array Iterations.html">Computer Code Elements</a>
+        <a href="JAVASCRIPT/Arrow Function.html">Div Elements</a>
+        <a href="JAVASCRIPT/ASP Example.html">Drag and Drop</a>
+        <a href="JAVASCRIPT/Assignment.html">Emojis</a>
+        <a href="JAVASCRIPT/Async.html">Encoding</a>
+        <a href="JAVASCRIPT/Asynchronous.html">Entities</a>
+        <a href="JAVASCRIPT/Best Practices.html">Favicon</a>
+        <a href="JAVASCRIPT/BigInt.html">form Attribute</a>
+        <a href="JAVASCRIPT/Bitwise Operations.html">From Elements</a>
+        <a href="JAVASCRIPT/Booleans.html">Forms</a>
+        <a href="JAVASCRIPT/Break and Continue.html">Geolocation</a>
+        <a href="JAVASCRIPT/Callbacks.html">id Attribute</a>
+        <a href="JAVASCRIPT/Class Inheritance.html">Iframes</Iframe></a>
+        <a href="JAVASCRIPT/Classes.html">Image maps</a>
+        <a href="JAVASCRIPT/Closures.html">Images</a>
+        <a href="JAVASCRIPT/Comments.html">Input Attribute</a>
+        <a href="JAVASCRIPT/Common Mistakes.html">Input form Attribute</a>
+        <a href="JAVASCRIPT/Comparison and Logical Operators.html">Input Types</Input></a>
+        <a href="JAVASCRIPT/Const.html">JavaScript</a>
+        <a href="JAVASCRIPT/Cookies.html">layout Element</a>
+        <a href="JAVASCRIPT/Data Types.html">links - Create</a>
+        <a href="JAVASCRIPT/Database Example.html">link - Different</a>
+        <a href="JAVASCRIPT/Date Formats.html">links</a>
+        <a href="JAVASCRIPT/Debugging.html">Lists</a>
+        <a href="JAVASCRIPT/Declaring Strict Mode.html">other Lists</a>
+        <a href="JAVASCRIPT/Destructuring.html">page title</title></a>
+        <a href="JAVASCRIPT/Display Objects.html">Background</a>
+        <a href="JAVASCRIPT/ECMAScript 2016.html">Plug-ins</a>
+        <a href="JAVASCRIPT/Date Objects.js">Responsive</a>
+        <a href="JAVASCRIPT/Debugging.js">Semantic Element</a>
+        <a href="JAVASCRIPT/Declaring Strict Mode.js">SSE</a>
+        <a href="JAVASCRIPT/Destructuring.js">Style Guide</style></a>
+        <a href="JAVASCRIPT/Display Objects.js">Style - CSS</a>
+        <a href="JAVASCRIPT/ECMAScript 2016.js">SVG</a>
+        <a href="JAVASCRIPT/ECMAScript 2017.js">Symbols</a>
+        <a href="JAVASCRIPT/ECMAScript 2018">Table Borders</a>
+        <a href="JAVASCRIPT/ECMAScript 2019.js">Table Colgroup</a>
+        <a href="JAVASCRIPT/ECMAScript 2020.js">Table Colspan</a>
+        <a href="JAVASCRIPT/ECMAScript 2021.js">Table Headers</a>
+        <a href="JAVASCRIPT/ECMAScript 2022.js">Table Padding</a>
+        <a href="JAVASCRIPT/ECMAScript 2023.js">Table Sizes</a>
+        <a href="JAVASCRIPT/ECMAScript 2024.js">Table Styling</a>
+        <a href="JAVASCRIPT/ECMAScript 2025.js">Tables</a>
+        <a href="JAVASCRIPT/Errors.js">The Head Element</a>
+        <a href="JAVASCRIPT/Events.js">Uniform</a>
+        <a href="JAVASCRIPT/Examples.js">Unordered</a>
+        <a href="JAVASCRIPT/Fetch API.js">Versus XHTML</a>
+        <a href="JAVASCRIPT/For In.js">Video</a>
+        <a href="JAVASCRIPT/For Loop.js">Web Storage</a>
+        <a href="JAVASCRIPT/For Of.js">Web Workers</a>
+        <a href="JAVASCRIPT/Forms.js">YouTube Videos</a>
+        <a href="JAVASCRIPT/Function apply().js">YouTube Videos</a>
+        <a href="JAVASCRIPT/Function bind().js">YouTube Videos</a>
+        <a href="JAVASCRIPT/Function call().js">YouTube Videos</a>
+        <a href="JAVASCRIPT/Function Definitions.js">YouTube Videos</a>
+        <a href="JAVASCRIPT/Function Invocation.js">YouTube Videos</a>
+        <a href="JAVASCRIPT/Function Parameters.js">YouTube Videos</a>
+        <a href="JAVASCRIPT/Functions.js">YouTube Videos</a>
+        <a href="JAVASCRIPT/General Methods.js">YouTube Videos</a>
+        <a href="JAVASCRIPT/Geolocation API.js">YouTube Videos</a>
+        <a href="JAVASCRIPT/Get Date Methods.js">YouTube Videos</a>
+        <a href="JAVASCRIPT/History API.js">YouTube Videos</a>
+        <a href="JAVASCRIPT/Hoisting.js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM - Changing CSS.js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM - Changing HTML.js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Animation.js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Collections.js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Document.js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Elements (Nodes).js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Elements.js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM EventListener.js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Events.js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Elements (Nodes).js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Events.js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Methods.js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM ">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Elements (Nodes).js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Elements (Nodes).js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Elements (Nodes).js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Elements (Nodes).js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Elements (Nodes).js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Elements (Nodes).js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Elements (Nodes).js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Elements (Nodes).js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Elements (Nodes).js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Elements (Nodes).js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Elements (Nodes).js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Elements (Nodes).js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Elements (Nodes).js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Elements (Nodes).js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Elements (Nodes).js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Elements (Nodes).js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Elements (Nodes).js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Elements (Nodes).js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Elements (Nodes).js">YouTube Videos</a>
+        <a href="JAVASCRIPT/HTML DOM Elements (Nodes).js">YouTube Videos</a>
+        <script src="script.js"></script>
+    </body>
+</html>

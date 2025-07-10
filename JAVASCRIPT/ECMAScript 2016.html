@@ -1,0 +1,946 @@
+Exponentiation Operator
+The exponentiation operator (**) raises the first operand to the power of the second operand.
+
+Example
+let x = 5;
+let z = x ** 2;
+x ** y produces the same result as Math.pow(x, y):
+
+Example
+let x = 5;
+let z = Math.pow(x,2);
+Exponentiation Assignment
+The exponentiation assignment operator (**=) raises the value of a variable to the power of the right operand.
+Example
+let x = 5;
+x **= 2;
+ADVERTISEMENT
+
+JavaScript Array includes()
+ECMAScript 2016 introduced Array.includes to arrays.
+
+This allows us to check if an element is present in an array:
+
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+fruits.includes("Mango");
+
+JavaScript String Padding
+ECMAScript 2017 added two string methods to JavaScript: padStart() and padEnd() to support padding at the beginning and at the end of a string.
+
+Examples
+let text = "5";
+text = text.padStart(4,0);
+let text = "5";
+text = text.padEnd(4,0);
+JavaScript Object Entries
+ECMAScript 2017 added the Object.entries() method to objects.
+
+Object.entries() returns an array of the key/value pairs in an object:
+
+Example
+const person = {
+  firstName : "John",
+  lastName : "Doe",
+  age : 50,
+  eyeColor : "blue"
+};
+
+let text = Object.entries(person);
+Object.entries() makes it simple to use objects in loops:
+
+Example
+const fruits = {Bananas:300, Oranges:200, Apples:500};
+
+let text = "";
+for (let [fruit, value] of Object.entries(fruits)) {
+  text += fruit + ": " + value + "<br>";
+}
+Object.entries() also makes it simple to convert objects to maps:
+
+Example
+const fruits = {Bananas:300, Oranges:200, Apples:500};
+
+const myMap = new Map(Object.entries(fruits));
+JavaScript Object Values
+Object.values() is similar to Object.entries(), but returns a single dimension array of the object values:
+
+Example
+const person = {
+  firstName : "John",
+  lastName : "Doe",
+  age : 50,
+  eyeColor : "blue"
+};
+
+let text = Object.values(person);
+ADVERTISEMENT
+
+JavaScript Async Functions
+Waiting for a Timeout
+async function myDisplay() {
+  let myPromise = new Promise(function(myResolve, myReject) {
+    setTimeout(function() { myResolve("I love You !!"); }, 3000);
+  });
+  document.getElementById("demo").innerHTML = await myPromise;
+}
+
+myDisplay();
+
+JavaScript Trailing Commas
+JavaScript allows trailing commas wherever a comma-separated list of values is accepted.
+
+In Array and Object Literals, Function Calls, Parameters, Imports and Exports.
+
+Example
+function myFunc(x,,,) {};
+const myArr = [1,2,3,4,,,];
+const myObj = {fname: John, age:50,,,};
+
+JavaScript Asynchronous Iteration
+ECMAScript 2018 added asynchronous iterators and iterables.
+
+With asynchronous iterables, we can use the await keyword in for/of loops.
+
+Example
+for await () {}
+JavaScript asynchronous iteration is supported in all modern browsers since January 2020:
+
+Chrome 63	Edge 79	Firefox 57	Safari 11	Opera 50
+Dec 2017	Jan 2020	Nov 2017	Sep 2017	Jan 2018
+JavaScript Promise.finally
+ECMAScript 2018 finalizes the full implementation of the Promise object with Promise.finally:
+
+Example
+let myPromise = new Promise();
+
+myPromise.then();
+myPromise.catch();
+myPromise.finally();
+Promise.finally is supported in all modern browsers since November 2018:
+
+Chrome 63	Edge 18	Firefox 58	Safari 11.1	Opera 50
+Dec 2017	Nov 2018	Jan 2018	Mar 2018	Jan 2018
+ADVERTISEMENT
+
+JavaScript Array Rest Elements
+ECMAScript 2018 added the rest operator (...).
+
+The rest operator (...) allows us to destruct an array and collect the leftovers:
+
+
+Example 1
+let a, rest;
+const arr1 = [1,2,3,4,5,6,7,8];
+
+[a, ...rest] = arr1;
+Example 2
+let a, b, rest;
+const arr1 = [1,2,3,4,5,6,7,8];
+
+[a, b, ...rest] = arr1;
+JavaScript Object Rest Properties
+ECMAScript 2018 added the rest operator (...).
+
+This allows us to destruct an object and collect the leftovers onto a new object:
+
+Example
+// Create an Object:
+const car = {type:"Fiat", model:"500", color:"white"};
+
+// Destructure the Object
+let {type, model, color} = car;
+document.getElementById("demo").innerHTML = "The car type is: " + type;
+Object rest properties is supported in all modern browsers since January 2020:
+
+Chrome 60	Edge 79	Firefox 55	Safari 11.1	Opera 47
+Jul 2017	Jan 2020	Aug 2017	Mar 2018	Aug 2017
+New JavaScript RegExp Features
+ECMAScript 2018 added 4 new RegExp features:
+
+Unicode Property Escapes (\p{...})
+Lookbehind Assertions (?<= ) and (?<! )
+Named Capture Groups
+s (dotAll) Flag
+The new RegExp features is supported in all modern browsers since June 2020:
+
+Chrome 64	Edge 79	Firefox 78	Safari 12	Opera 51
+Jan 2018	Jan 2020	Jun 2020	Sep 2018	Feb 2018
+JavaScript Threads
+In JavaScript you use the Web Workers API to create threads.
+
+Worker threads are used to execute code in the background so that the main program can continue execution.
+
+Worker threads run simultaneously with the main program. Simultaneous execution of different parts of a program can be time-saving.
+
+JavaScript Shared Memory
+Shared memory is a feature that allows threads (different parts of a program) to access and update the same data in the same memory.
+
+Instead of passing data between threads, you can pass a SharedArrayBuffer object that points to the memory where data is saved.
+
+SharedArrayBuffer
+A SharedArrayBuffer object represents a fixed-length raw binary data buffer similar to the ArrayBuffer object.
+
+JavaScript String trimStart()
+ES2019 added the String method trimStart() to JavaScript.
+
+The trimStart() method works like trim(), but removes whitespace only from the start of a string.
+
+Example
+let text1 = "     Hello World!     ";
+let text2 = text1.trimStart();
+JavaScript String trimStart() is supported in all modern browsers since January 2020:
+
+Chrome 66	Edge 79	Firefox 61	Safari 12	Opera 50
+Apr 2018	Jan 2020	Jun 2018	Sep 2018	May 2018
+JavaScript String trimEnd()
+ES2019 added the String method trimEnd() to JavaScript.
+
+The trimEnd() method works like trim(), but removes whitespace only from the end of a string.
+
+Example
+let text1 = "     Hello World!     ";
+let text2 = text1.trimEnd();
+JavaScript String trimEnd() is supported in all modern browsers since January 2020:
+
+Chrome 66	Edge 79	Firefox 61	Safari 12	Opera 50
+Apr 2018	Jan 2020	Jun 2018	Sep 2018	May 2018
+JavaScript Object fromEntries()
+ES2019 added the Object method fromEntries() to JavaScript.
+
+The fromEntries() method creates an object from iterable key / value pairs.
+
+Example
+const fruits = [
+["apples", 300],
+["pears", 900],
+["bananas", 500]
+];
+
+const myObj = Object.fromEntries(fruits);
+JavaScript Object fromEntries() is supported in all modern browsers since January 2020:
+
+Chrome 73	Edge 79	Firefox 63	Safari 12.1	Opera 60
+Mar 2019	Jan 2020	Oct 2018	Mar 2019	Apr 2019
+ADVERTISEMENT
+
+Optional catch Binding
+From ES2019 you can omit the catch parameter if you don't need it:.
+
+Example
+Before 2019:
+
+try {
+// code
+} catch (err) {
+// code
+}
+After 2019:
+
+try {
+// code
+} catch {
+// code
+}
+Optional catch binding is supported in all modern browsers since January 2020:
+
+Chrome 66	Edge 79	Firefox 58	Safari 11.1	Opera 53
+Apr 2018	Jan 2020	Jan 2018	Mar 2018	May 2018
+JavaScript Array flat()
+ES2019 added the Array flat() method to JavaScript.
+
+The flat() method creates a new array by flattening a nested array.
+
+Example
+const myArr = [[1,2],[3,4],[5,6]];
+const newArr = myArr.flat();
+JavaScript Array flat() is supported in all modern browsers since January 2020:
+
+Chrome 69	Edge 79	Firefox 62	Safari 12	Opera 56
+Sep 2018	Jan 2020	Sep 2018	Sep 2018	Sep 2018
+JavaScript Array flatMap()
+ES2019 added the Array flatMap() method to JavaScript.
+
+The flatMap() method first maps all elements of an array and then creates a new array by flattening the array.
+
+Example
+const myArr = [1, 2, 3, 4, 5, 6];
+const newArr = myArr.flatMap(x => [x, x * 10]);
+Stable Array sort()
+ES2019 revised the Array sort() method.
+
+Before 2019, the specification allowed unstable sorting algorithms such as QuickSort.
+
+After ES2019, browsers must use a stable sorting algorithm:
+
+When sorting elements on a value, the elements must keep their relative position to other elements with the same value.
+
+Example
+const myArr = [
+  {name:"X00",price:100 },
+  {name:"X01",price:100 },
+  {name:"X02",price:100 },
+  {name:"X03",price:100 },
+  {name:"X04",price:110 },
+  {name:"X05",price:110 },
+  {name:"X06",price:110 },
+  {name:"X07",price:110 }
+];
+In the example above, when sorting on price, the result should not have names in a different relative position, such as this:
+
+X01 100
+X03 100
+X00 100
+X03 100
+X05 110
+X04 110
+X06 110
+X07 110
+Revised JSON.stringify()
+ES2019 revised the JSON stringify() method.
+
+Before 2019, JSON could not stringify character encoded with \.
+
+Example
+let text = JSON.stringify("\u26D4");
+Before ES2019, using JSON.stringify()JSON on UTF-8 code points (U+D800 to U+DFFF) returned broken Unicode characters like ���.
+
+After this revision, strings with UTF-8 code points convert safely with JSON.stringify(), and back to the original using JSON.parse().
+
+Separator Symbols
+Line separators and paragraph separator symbols (\u2028 and \u2029) are now allowed in string literals.
+
+Before 2019, these were treated as line terminators and resulted in error exceptions:
+
+Example
+// This is valid in ES2019:
+let text = "\u2028";
+Note
+Now, JavaScript and JSON have equal rules.
+
+Before ES2019:
+
+text = JSON.parse('"\u2028"') would parse to ''.
+
+text = '"\u2028"' would give syntax error.
+
+Revised Function toString()
+ES2019 revised the Function toString() method.
+
+The toString() method returns a string representing the source code of a function.
+
+From 2019, toString() must return the source code of the function including comments, spaces, and syntax details.
+
+Before 2019, different browsers returned different variants of the function (like without comments and spaces). From 2019 the function should be returned exactly as it is written.
+
+Example
+function myFunction(p1, p2) {
+  return p1 * p2;
+}
+
+JavaScript BigInt
+JavaScript BigInt variables are used to store big integer values that are too big to be represented by a a normal JavaScript Number.
+
+JavaScript integers are only accurate up to about 15 digits.
+
+Integer Example
+let x = 999999999999999;
+let y = 9999999999999999; // too big
+BigInt Example
+let x = 9999999999999999;
+let y = 9999999999999999n;
+To create a BigInt, append n to the end of an integer or call BigInt():
+
+Example
+let x = 1234567890123456789012345n;
+let y = BigInt(1234567890123456789012345)
+The JavaScript typeof a BigInt is "bigint":
+
+Example
+let x = BigInt(999999999999999);
+let type = typeof x;
+BigInt is supported in all modern browsers since September 2020:
+
+Chrome 67	Edge 79	Firefox 68	Safari 14	Opera 54
+May 2018	Jan 2020	Jul 2019	Sep 2020	Jun 2018
+JavaScript String matchAll()
+Before ES2020 there was no string method that could be used to search for all occurrences of a string in a string.
+
+Example
+const iterator = text.matchAll("Cats");
+If the parameter is a regular expression, the global flag (g) must be set set, otherwise a TypeError is thrown.
+
+Example
+const iterator = text.matchAll(/Cats/g);
+If you want to search case insensitive, the insensitive flag (i) must be set:
+
+Example
+const iterator = text.matchAll(/Cats/gi);
+Note
+ES2021 introduced the string method replaceAll().
+
+ADVERTISEMENT
+
+The Nullish Coalescing Operator (??)
+The ?? operator returns the first argument if it is not nullish (null or undefined).
+
+Otherwise it returns the second.
+
+Example
+let name = null;
+let text = "missing";
+let result = name ?? text;
+The nullish operator is supported in all modern browsers since March 2020:
+
+Chrome 80	Edge 80	Firefox 72	Safari 13.1	Opera 67
+Feb 2020	Feb 2020	Jan 2020	Mar 2020	Mar 2020
+The Optional Chaining Operator (?.)
+The Optional Chaining Operator returns undefined if an object is undefined or null (instead of throwing an error).
+
+Example
+const car = {type:"Fiat", model:"500", color:"white"};
+let name = car?.name;
+The ?.= operator is supported in all modern browsers since March 2020:
+
+Chrome 80	Edge 80	Firefox 74	Safari 13.1	Opera 67
+Feb 2020	Feb 2020	Mar 2020	Mar 2020	Mar 2020
+The &&= Operator
+The Logical AND Assignment Operator is used between two values.
+
+If the first value is true, the second value is assigned.
+
+Logical AND Assignment Example
+let x = 10;
+x &&= 5;
+The &&= operator is supported in all modern browsers since September 2020:
+
+Chrome 85	Edge 85	Firefox 79	Safari 14	Opera 71
+Aug 2020	Aug 2020	Mar 2020	Sep 2020	Sep 2020
+The ||= Operator
+The Logical OR Assignment Operator is used between two values.
+
+If the first value is false, the second value is assigned.
+
+Logical OR Assignment Example
+let x = 10;
+x ||= 5;
+The ||= operator is supported in all modern browsers since September 2020:
+
+Chrome 85	Edge 85	Firefox 79	Safari 14	Opera 71
+Aug 2020	Aug 2020	Mar 2020	Sep 2020	Sep 2020
+The ??= Operator
+The Nullish Coalescing Assignment Operator is used between two values.
+
+If the first value is undefined or null, the second value is assigned.
+
+Nullish Coalescing Assignment Example
+let x;
+x ??= 5;
+The ??= operator is supported in all modern browsers since September 2020:
+
+Chrome 85	Edge 85	Firefox 79	Safari 14	Opera 71
+Aug 2020	Aug 2020	Mar 2020	Sep 2020	Sep 2020
+JavaScript Promise.allSettled()
+The Promise.allSettled() method returns a single Promise from a list of promises.
+
+Example
+// Create a Promise
+const myPromise1 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 200, "King");
+});
+
+// Create another Promise
+const myPromise2 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 100, "Queen");
+});
+
+// Settle All
+Promise.allSettled([myPromise1, myPromise2]).then((results) =>
+  results.forEach((x) => myDisplay(x.status)),
+);
+Promise.allSettled() is supported in all modern browsers since March 2020:
+
+Chrome 76	Edge 79	Firefox 71	Safari 13	Opera 63
+May 2019	Nov 2019	Mar 2020	Sep 2019	Aug 2019
+
+ECMAScript 2021 is supported in all modern browsers since April 2021:
+
+Chrome 85	Edge 85	Firefox 79	Safari 14.1	Opera 71
+Aug 2020	Aug 2020	Jul 2020	Apr 2021	Sep 2020
+JavaScript Promise.any()
+Example
+// Create a Promise
+const myPromise1 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 200, "King");
+});
+
+// Create another Promise
+const myPromise2 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 100, "Queen");
+});
+
+// Run when any promise fulfill
+Promise.any([myPromise1, myPromise2]).then((x) => {
+  myDisplay(x);
+});
+Promise.any() is supported in all modern browsers since September 2020:
+
+Chrome 85	Edge 85	Firefox 79	Safari 14	Opera 71
+Aug 2020	Aug 2020	Jul 2020	Sep 2020	Sep 2020
+JavaScript String ReplaceAll()
+ES2021 introduced the string method replaceAll():
+
+Example
+text = text.replaceAll("Cats","Dogs");
+text = text.replaceAll("cats","dogs");
+The replaceAll() method allows you to specify a regular expression instead of a string to be replaced.
+
+If the parameter is a regular expression, the global flag (g) must be set, otherwise a TypeError is thrown.
+
+Example
+text = text.replaceAll(/Cats/g,"Dogs");
+text = text.replaceAll(/cats/g,"dogs");
+replace.All() is supported in all modern browsers since April 2021:
+
+Chrome 85	Edge 85	Firefox 77	Safari 13.1	Opera 71
+Aug 2020	Aug 2020	Jun 2020	Mar 2020	Sep 2020
+Note
+ES2020 introduced the string method matchAll().
+
+ADVERTISEMENT
+
+JavaScript Numeric Separator (_)
+ES2021 intoduced the numeric separator (_) to make numbers more readable:
+
+Example
+const num = 1_000_000_000;
+The numeric separator is only for visual use.
+
+Example
+const num1 = 1_000_000_000;
+const num2 = 1000000000;
+(num1 === num2);
+The numeric separator can be placed anywhere in a number:
+
+Example
+const num1 = 1_2_3_4_5;
+Note
+The numeric separator is not allowed at the beginning or at the end of a number.
+
+In JavaScript only variables can start with _.
+
+The numeric separator is supported in all modern browsers since January 2020:
+
+Chrome 75	Edge 79	Firefox 74	Safari 13.1	Opera 67
+Jun 2019	Jan 2020	Oct 2019	Sep 2019	Jun 2019
+
+JavaScript Array at()
+ES2022 intoduced the array method at():
+
+Examples
+Get the third element of fruits:
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = fruits.at(2);
+Get the third element of fruits:
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = fruits[2];
+The at() method returns an indexed element from an array.
+
+The at() method returns the same as [].
+
+The at() method is supported in all modern browsers since March 2022:
+
+Chrome 92	Edge 92	Firefox 90	Safari 15.4	Opera 78
+Apr 2021	Jul 2021	Jul 2021	Mar 2022	Aug 2021
+Note
+Many languages allows negative bracket indexing like [-1] to access elements from the end of an object / array / string.
+
+This is not possible in JavaScript, because [] is used for accessing both arrays and objects. obj[-1] refers to the value of key -1, not to the last property of the object.
+
+The at() method was introduced in ES2022 to solve this problem.
+
+JavaScript String at()
+ES2022 intoduced the string method at():
+
+Examples
+Get the third letter of name:
+
+const name = "W3Schools";
+let letter = name.at(2);
+Get the third letter of name:
+
+const name = "W3Schools";
+let letter = name[2];
+The at() method returns an indexed element from an string.
+
+The at() method returns the same as [].
+
+The at() method is supported in all modern browsers since March 2022:
+
+Chrome 92	Edge 92	Firefox 90	Safari 15.4	Opera 78
+Apr 2021	Jul 2021	Jul 2021	Mar 2022	Aug 2021
+RegExp d Modifier
+ES2022 added the /d modifier to express the start and end of the match.
+
+Example
+let text = "aaaabb";
+let result = text.match(/(aa)(bb)/d);
+RegExp Modifiers are used to spescfy case-insensitive, and other global searches:
+
+Modifier	Description	Try it
+i	Perform case-insensitive matching	
+g	Perform a global match (find all)	
+m	Perform multiline matching	
+d	Perform substring matches (New in ES2022)	
+Object hasOwn
+ES2022 provides a safe way to check if a property is the own property of an object.
+
+Object.hasOwn() is similar to Object.prototype.hasOwnProperty but supports all object types.
+
+Example
+Object.hasOwn(myObject, age)
+Error Cause
+ES2022 let you specify the reason behind an error with error.cause.
+
+Example
+try { connectData(); } catch (err) { throw new Error("Connecting failed.", { cause: err }); }
+ADVERTISEMENT
+
+JavaScript await import
+JavasSript modules can now wait for resources that require import before running:
+
+import {myData} from './myData.js';
+
+const data = await myData();
+JavaScript Class Field Declarations
+class Hello {
+  counter = 0; // Class field
+}
+const myClass = new Hello();
+
+let x = myClass.counter;
+Class Field Declarations is supported in all modern browsers since April 2021:
+
+Chrome 72	Edge 79	Firefox 69	Safari 14.1	Opera 60
+Jan 2019	Jan 2020	Sep 2019	Apr 2021	Jan 2020
+JavaScript Private Methods and Fields
+class Hello {
+  #counter = 0;  // Private field
+  #myMethod() {} // Private method
+}
+const myClass = new Hello();
+
+let x = myClass.#counter; // Error
+myClass.#myMethod();      // Error
+
+JavaScript Array findLast() Method
+ES2023 added the findLast() method that will start from the end of an array and return the value of the first element that satisfies a condition.
+
+Example
+const temp = [27, 28, 30, 40, 42, 35, 30];
+let high = temp.findLast(x => x > 40);
+JavaScript Array findLastIndex() Method
+The findLastIndex() method finds the index of the last element that satisfies a condition.
+
+Example
+const temp = [27, 28, 30, 40, 42, 35, 30];
+let pos = temp.findLastIndex(x => x > 40);
+JavaScript Array toReversed() Method
+ES2023 added the Array toReversed() method as a safe way to reverse an array without altering the original array.
+
+The difference between the new toReversed() method and the old reverse() method is that the new method creates a new array, keeping the original array unchanged, while the old method altered the original array.
+
+Example
+const months = ["Jan", "Feb", "Mar", "Apr"];
+const reversed = months.toReversed();
+JavaScript Array toSorted() Method
+ES2023 added the Array toSorted() method as a safe way to sort an array without altering the original array.
+
+The difference between the new toSorted() method and the old sort() method is that the new method creates a new array, keeping the original array unchanged, while the old method altered the original array.
+
+Example
+const months = ["Jan", "Feb", "Mar", "Apr"];
+const sorted = months.toSorted();
+JavaScript Array toSpliced() Method
+ES2023 added the Array toSpliced() method as a safe way to splice an array without altering the original array.
+
+The difference between the new toSpliced() method and the old splice() method is that the new method creates a new array, keeping the original array unchanged, while the old method altered the original array.
+
+Example
+const months = ["Jan", "Feb", "Mar", "Apr"];
+const spliced = months.toSpliced(0, 1);
+ADVERTISEMENT
+
+JavaScript Array with() Method
+ES2023 added the Array with() method as a safe way to update elements in an array without altering the original array.
+
+Example
+const months = ["Januar", "Februar", "Mar", "April"];
+const new = months.with(2, "March");
+#! JavaScript Shebang
+A Shebang is a number sign and an exclamation mark (#!) at the beginning of a script:
+
+#!/usr/bin/env node
+
+JavaScript Object.groupBy()
+Example
+// Create an Array
+const fruits = [
+  {name:"apples", quantity:300},
+  {name:"bananas", quantity:500},
+  {name:"oranges", quantity:200},
+  {name:"kiwi", quantity:150}
+];
+
+// Callback function to Group Elements
+function myCallback({ quantity }) {
+  return quantity > 200 ? "ok" : "low";
+}
+
+// Group by Quantity
+const result = Object.groupBy(fruits, myCallback);
+Description
+The Object.groupBy() method groups elements of an object according to string values returned from a callback function.
+
+The Object.groupBy() method does not change the original object.
+
+Note:
+The elements in the original and in the returned object are the same.
+
+Changes will be reflected in both the original and in the returned object.
+
+JavaScript Map.groupBy()
+Example
+// Create an Array
+const fruits = [
+  {name:"apples", quantity:300},
+  {name:"bananas", quantity:500},
+  {name:"oranges", quantity:200},
+  {name:"kiwi", quantity:150}
+];
+
+// Callback function to Group Elements
+function myCallback({ quantity }) {
+  return quantity > 200 ? "ok" : "low";
+}
+
+// Group by Quantity
+const result = Map.groupBy(fruits, myCallback);
+Description
+The Map.groupBy() method groups elements of an object according to string values returned from a callback function.
+
+The Map.groupBy() method does not change the original object.
+
+Note:
+The elements in the original and in the returned object are the same.
+
+Changes will be reflected in both the original and in the returned object.
+
+Object.groupBy() vs Map.groupBy()
+The difference between Object.groupBy() and Map.groupBy() is:
+
+Object.groupBy() groups elements into a JavaScript object.
+
+Map.groupBy() groups elements into a Map object.
+
+ADVERTISEMENT
+
+JavaScript String isWellFormed()
+The isWellFormed() method returns true if a string is well formed.
+
+Otherwise it returns false.
+
+A string is not well formed if it contains lone surrogates.
+
+Examples
+let text = "Hello world!";
+let result = text.isWellFormed();
+let text = "Hello World \uD800";
+let result = text.isWellFormed();
+Lone Surrogates
+A lone surrogate is a Unicode surrogate code point that is not part of a valid surrogate pair used to represent characters in UTF-16 encoding.
+
+JavaScript String toWellFormed()
+The String method toWellFormed() returns a new string where all "lone surrogates" are replaced with the Unicode replacement character (U+FFFD).
+
+Examples
+let text = "Hello World \uD800";
+let result = text.toWellFormed();
+
+The RegExp.escape() Method
+The RegExp.escape() method returns a string where characters that belongs to the regular expression syntax are escaped.
+
+This makes it possible to treat characters like +, *, ?, ^, $, (, ), [, ], {, }, |, and \ literally, and not as part of a regular expression.
+
+Example
+Create a regular expression that matches the string "[*]":
+
+// Escape a text for to use as a regular expression
+const safe = RegExp.escape("[*]";
+
+// Build a new reglar expression
+const regex = new RegExp(safe);
+
+// Text to replace within
+const oldText = "[*] is a web school.";
+
+// Perform the replace
+const newText = oldText.match(regex, "W3Schools");
+RegExp.escape() is supported all in modern browsers since May 2025:
+
+Chrome 136	Edge 136	Firefox 134	Safari 18.2	Opera 121
+Apr 2025	May 2025	Jan 2025	Des 2024	Jun 2025
+Modules with Import Attributes
+Syntax
+import {names} from "module-name" with {key:"data"};
+Examples
+import config from "config.json" with {type:"json"};
+
+import styles from "styles.css" with {type:"css"};
+
+import data from "data.json" with {type:"json"};
+The Float16Array Method
+A Float16Array is a TypedArray that stores 16-bit (half-precision) floating-point numbers in the IEEE 754 half-precision format.
+
+Float16Array requires half the memory of Float32Array and a quarter of Float64Array.
+
+Example
+const myArr = new Float16Array([1.5, 2.5, 3.5, 4.5]);
+
+let bytes = myArr.BYTES_PER_ELEMENT;
+let length = myArr.length;
+The Float16Array object is supported in all modern browsers since June 2024:
+
+Chrome 135	Edge 135	Firefox 129	Safari 18.2	Opera 120
+Apr 2025	Apr 2025	Aug 2024	Des 2024	May 2025
+The Math.f16round Method
+The static Math.f16round() method returns the nearest 16-bit floating point representation of a number.
+
+Example
+let a = Math.f16round(2.60);
+let b = Math.f16round(2.50);
+let c = Math.f16round(2.49);
+let d = Math.f16round(-2.60);
+let e = Math.f16round(-2.50);
+let f = Math.f16round(-2.49);
+The Math.f16round() method is supported in all modern browsers since June 2024:
+
+Chrome 135	Edge 135	Firefox 129	Safari 18.2	Opera 120
+Apr 2025	Apr 2025	Aug 2024	Des 2024	May 2025
+The Promise.try() Method
+The Promise.try() method starts a promise chain from potentially throwing, synchronous code.
+
+This ensures exceptions are correctly handled as promise rejections.
+
+Example
+function compute() {
+  return Promise.try(() => {
+    const v = mayThrowSync();
+    return asyncFunc(v);
+  });
+}
+JavaScript Set union()
+The union() method returns the union of two sets.
+
+The union() method returns a new set containing the elements which are in this set, or in the argument set, or in both:
+
+Union
+
+Example
+const A = new Set(['a','b','c']);
+const B = new Set(['b','c','d']);
+
+const C = A.union(B);
+The union() method is supported in all modern browsers since June 2024:
+
+Chrome 122	Edge 122	Firefox 127	Safari 17	Opera 108
+Feb 2024	Feb 2024	Jun 2024	Sep 2023	Mar 2024
+JavaScript Set intersection()
+The intersection() method returns the intersection of two sets.
+
+The intersection() method returns a new set containing the elements which are in this set and in the argument set:
+
+Intersection
+
+Example
+const A = new Set(['a','b','c']);
+const B = new Set(['b','c','d']);
+
+const C = A.intersection(B);
+The intersection() method is supported in all modern browsers since June 2024:
+
+Chrome 122	Edge 122	Firefox 127	Safari 17	Opera 108
+Feb 2024	Feb 2024	Jun 2024	Sep 2023	Mar 2024
+JavaScript Set difference()
+The difference() method returns the difference between two sets.
+
+The difference() method returns a new set containing elements which are in this set but not in the argument set:
+
+Difference
+
+Example
+const A = new Set(['a','b','c']);
+const B = new Set(['b','c','d']);
+
+const C = A.difference(B);
+The difference() method is supported in all modern browsers since June 2024:
+
+Chrome 122	Edge 122	Firefox 127	Safari 17	Opera 108
+Feb 2024	Feb 2024	Jun 2024	Sep 2023	Mar 2024
+JavaScript Set symmetricDifference()
+The symmetricDifference() method returns the symmetric difference between to sets.
+
+The symmetricDifference() method returns a new set containing elements which are in this set or in the argument set, but not in both:
+
+Symmetric Difference
+
+Example
+const A = new Set(['a','b','c']);
+const B = new Set(['b','c','d']);
+
+const C = A.symetricDifference(B);
+The symmetricDifference() method is supported in all modern browsers since June 2024:
+
+Chrome 122	Edge 122	Firefox 127	Safari 17	Opera 108
+Feb 2024	Feb 2024	Jun 2024	Sep 2023	Mar 2024
+JavaScript Set isSubsetOf()
+The isSubsetOf() method returns true if all elements in this set are elements in the argument set:
+
+Subset
+
+Example
+const A = new Set(['a','b','c']);
+const B = new Set(['b','c','d']);
+
+let answer = A.isSubsetOf(B);
+The isSubsetOf() method is supported in all modern browsers since June 2024:
+
+Chrome 122	Edge 122	Firefox 127	Safari 17	Opera 108
+Feb 2024	Feb 2024	Jun 2024	Sep 2023	Mar 2024
+JavaScript Set isSupersetOf()
+The isSupersetOf() method returns true if all elements in the argument set are also in this set:
+
+Superset
+
+Example
+const A = new Set(['a','b','c']);
+const B = new Set(['b','c','d']);
+
+let answer = A.isSupersetOf(B);
+The isSupersetOf() method is supported in all modern browsers since June 2024:
+
+Chrome 122	Edge 122	Firefox 127	Safari 17	Opera 108
+Feb 2024	Feb 2024	Jun 2024	Sep 2023	Mar 2024
+JavaScript Set isDisjointFrom()
+The isDisjointFrom() method returns true if this set has no elements in common with the argument set:
+
+Disjoint
+
+Example
+const A = new Set(['a','b','c']);
+const B = new Set(['b','c','d']);
+
+let answer = A.isDisjointFrom(B);

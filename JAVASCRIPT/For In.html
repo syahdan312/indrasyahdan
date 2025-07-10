@@ -1,0 +1,41 @@
+The For In Loop
+The JavaScript for in statement loops through the properties of an Object:
+
+Syntax
+for (key in object) {
+  // code block to be executed
+}
+Example
+const person = {fname:"John", lname:"Doe", age:25};
+
+let text = "";
+for (let x in person) {
+  text += person[x];
+}
+JavaScript Loops
+Loops are handy, if you want to run the same code over and over again, each time with a different value.
+
+Often this is the case when working with arrays:
+
+Instead of writing:
+text += cars[0] + "<br>";
+text += cars[1] + "<br>";
+text += cars[2] + "<br>";
+text += cars[3] + "<br>";
+text += cars[4] + "<br>";
+text += cars[5] + "<br>";
+You can write:
+for (let i = 0; i < cars.length; i++) {
+  text += cars[i] + "<br>";
+}
+(let i = 0; i < 5; i++) {
+  text += "The number is " + i + "<br>";
+}
+Looping over an Array
+Example
+const cars = ["BMW", "Volvo", "Mini"];
+
+let text = "";
+for (let x of cars) {
+  text += x;
+}
